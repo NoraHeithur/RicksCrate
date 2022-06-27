@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.screen.character.details.CharacterDetailsFragment">
+
+    <data>
+
+        <variable
+            name="character"
+            type="com.nora.rickscrate.domain.model.Character" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/details_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_details_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:transitionName="@string/character_details_transition_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/details_main_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/spacing_normal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/details_image_iv"
+                    android:layout_width="@dimen/width_height_no_size"
+                    android:layout_height="@dimen/width_height_no_size"
+                    android:adjustViewBounds="false"
+                    android:cropToPadding="false"
+                    android:scaleType="centerCrop"
+                    app:imageSrc="@{character.image}"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@id/guild_end_of_image"
+                    app:layout_constraintStart_toStartOf="@id/guild_start"
+                    app:layout_constraintTop_toTopOf="@id/guild_top"
+                    tools:ignore="ImageContrastCheck"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/details_character_name_tv"
+                    style="@style/Rick.TextView.body_details_large"
+                    android:layout_width="@dimen/width_height_no_size"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_normal"
+                    android:gravity="center"
+                    android:text="@{character.name}"
+                    app:layout_constraintEnd_toEndOf="@id/guild_end"
+                    app:layout_constraintStart_toEndOf="@id/guild_end_of_image"
+                    app:layout_constraintTop_toTopOf="@id/guild_top"
+                    tools:text="@string/label_character_name" />
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/divider_name"
+                    android:layout_width="@dimen/width_height_no_size"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_normal"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    app:layout_constraintEnd_toEndOf="@id/guild_end"
+                    app:layout_constraintStart_toStartOf="@id/guild_end_of_image"
+                    app:layout_constraintTop_toBottomOf="@id/details_character_name_tv" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/gender_container"
+                    android:layout_width="@dimen/width_height_no_size"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_normal"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@id/species_container"
+                    app:layout_constraintEnd_toEndOf="@id/guild_end"
+                    app:layout_constraintStart_toEndOf="@id/guild_end_of_image"
+                    app:layout_constraintTop_toBottomOf="@id/divider_name"
+                    app:layout_constraintVertical_chainStyle="packed">
+
+                    <LinearLayout
+                        android:id="@+id/status_field"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintEnd_toStartOf="@id/gender_field"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Rick.TextView.body_mini"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/label_status" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/details_status_tv"
+                            style="@style/Rick.TextView.body"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{character.status}"
+                            tools:text="@string/label_status_alive" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/gender_field"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="@id/status_field"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/status_field"
+                        app:layout_constraintTop_toTopOf="@id/status_field">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/Rick.TextView.body_mini"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/label_gender" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/details_gender_tv"
+                            style="@style/Rick.TextView.body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@{character.gender}"
+                            tools:text="@string/label_gender_male" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/species_container"
+                    android:layout_width="@dimen/width_height_no_size"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_normal"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@id/type_container"
+                    app:layout_constraintEnd_toEndOf="@id/guild_end"
+                    app:layout_constraintStart_toEndOf="@id/guild_end_of_image"
+                    app:layout_constraintTop_toBottomOf="@id/gender_container">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Rick.TextView.body_mini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/label_species" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/details_species_tv"
+                        style="@style/Rick.TextView.body_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@{character.species}"
+                        tools:text="@string/label_species_human" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/type_container"
+                    android:layout_width="@dimen/width_height_no_size"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_normal"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:orientation="vertical"
+                    app:goneIfTextIsEmpty="@{character.type}"
+                    app:layout_constraintBottom_toTopOf="@id/origin_container"
+                    app:layout_constraintEnd_toEndOf="@id/guild_end"
+                    app:layout_constraintStart_toEndOf="@id/guild_end_of_image"
+                    app:layout_constraintTop_toBottomOf="@id/species_container">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Rick.TextView.body_mini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/label_species_type_details" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/details_type_tv"
+                        style="@style/Rick.TextView.body_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@{character.type}"
+                        tools:text="@string/label_character_type" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/origin_container"
+                    android:layout_width="@dimen/width_height_no_size"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_normal"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@id/appearance_container"
+                    app:layout_constraintEnd_toEndOf="@id/guild_end"
+                    app:layout_constraintStart_toEndOf="@id/guild_end_of_image"
+                    app:layout_constraintTop_toBottomOf="@id/type_container">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Rick.TextView.body_mini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/label_origin" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/details_origin_tv"
+                        style="@style/Rick.TextView.body_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@{character.origin}"
+                        tools:text="@string/label_origin_details" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/appearance_container"
+                    android:layout_width="@dimen/width_height_no_size"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_normal"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="@id/guild_end"
+                    app:layout_constraintStart_toEndOf="@id/guild_end_of_image"
+                    app:layout_constraintTop_toBottomOf="@id/origin_container">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Rick.TextView.body_mini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/label_last_appearance" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/details_last_appearance_tv"
+                        style="@style/Rick.TextView.body_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@{character.lastAppearance}"
+                        tools:text="@string/label_last_appearance_details" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/episode_container"
+                    android:layout_width="@dimen/width_height_no_size"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_normal"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="@id/guild_end"
+                    app:layout_constraintStart_toEndOf="@id/guild_end_of_image"
+                    app:layout_constraintTop_toBottomOf="@id/appearance_container">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/Rick.TextView.body_mini"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/label_appeared_in" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/episode_bound_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:orientation="vertical"
+                        android:scrollbars="none"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="@integer/episode_bound_item_span_count"
+                        tools:listitem="@layout/item_episode_bound" />
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guild_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="@dimen/spacing_normal" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guild_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_begin="@dimen/spacing_normal" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guild_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_end="@dimen/spacing_normal" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guild_end_of_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.4" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

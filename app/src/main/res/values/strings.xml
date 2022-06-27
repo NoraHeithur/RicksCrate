@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Rick\'s crate</string>
+
+    <!--  menu label  -->
+    <string name="menu_label_character">Characters</string>
+    <string name="menu_label_episode">Episodes</string>
+    <string name="menu_label_location">Locations</string>
+
+    <!--  label  -->
+    <string name="label_character_name">Character name</string>
+    <string name="label_status">Status:</string>
+    <string name="label_status_alive">Alive</string>
+    <string name="label_species">Species:</string>
+    <string name="label_species_human">Human</string>
+    <string name="label_gender">Gender:</string>
+    <string name="label_gender_male">Male</string>
+    <string name="label_character_type">Character type</string>
+    <string name="label_species_type_details">Type:</string>
+    <string name="label_origin">Origin:</string>
+    <string name="label_origin_details">Earth (Giant Telepathic Spiders Dimension)</string>
+    <string name="label_last_appearance">Last Appearance:</string>
+    <string name="label_last_appearance_details">Earth (Giant Telepathic Spiders Dimension)</string>
+    <string name="label_appeared_in">Appeared in:</string>
+    <string name="label_episode_code">S05E10</string>
+    <string name="label_episode_name">Some episode name</string>
+    <string name="label_episode_air">December 2, 2013</string>
+    <string name="label_location_type">Planet</string>
+    <string name="label_location">Replacement Dimension</string>
+    <string name="label_refresh">Refreshed!</string>
+    <string name="label_unknown">Unknown</string>
+    <string name="label_where_the_place_is">Where:</string>
+    <string name="label_no_internet_connection">No Internet Connection!</string>
+
+    <!--  transition  -->
+    <string name="character_details_transition_name">character_details_card</string>
+
+    <!--  button  -->
+    <string name="btn_label_retry">Retry</string>
+</resources>

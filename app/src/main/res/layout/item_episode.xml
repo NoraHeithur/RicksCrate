@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="episode"
+            type="com.nora.rickscrate.domain.model.Episode" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_episode_container"
+        style="@style/Rick.MaterialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_small">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/spacing_normal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/episode_code_tv"
+                style="@style/Rick.TextView.body_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{episode.code}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/label_episode_code" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/episode_name_tv"
+                style="@style/Rick.TextView.body_viewsStart"
+                android:layout_width="@dimen/width_height_no_size"
+                android:layout_height="wrap_content"
+                android:text="@{episode.name}"
+                android:textAlignment="viewStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/episode_code_tv"
+                tools:text="@string/label_episode_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/episode_air_date_tv"
+                style="@style/Rick.TextView.body_mini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{episode.airDate}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/label_episode_air" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

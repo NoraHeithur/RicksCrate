@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_graph_character"
+        android:icon="@drawable/ic_rick_sanchez"
+        android:title="@string/menu_label_character" />
+
+    <item
+        android:id="@+id/nav_graph_episode"
+        android:icon="@drawable/ic_outline_video_episode"
+        android:title="@string/menu_label_episode" />
+
+    <item
+        android:id="@+id/nav_graph_location"
+        android:icon="@drawable/ic_outline_location"
+        android:title="@string/menu_label_location" />
+</menu>

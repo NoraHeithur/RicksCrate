@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="episode"
+            type="com.nora.rickscrate.domain.model.EpisodeBound" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/episode_bound_container"
+        style="@style/Rick.MaterialCardView_mini"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_short">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/episode_bound_tv"
+            style="@style/Rick.TextView.body_mini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/spacing_small"
+            android:text="@{episode.code}"
+            tools:text="@string/label_episode_code" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

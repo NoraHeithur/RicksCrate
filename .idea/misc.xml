@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/drawable/ic_launcher_background.xml" value="0.189" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/drawable/ic_outline_broken_image.xml" value="0.1" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/drawable/ic_outline_location.xml" value="0.185" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/drawable/ic_outline_video_episode.xml" value="0.185" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/drawable/ic_rick_sanchez.xml" value="0.185" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/drawable/ic_round_arrow_right.xml" value="0.1965" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/drawable/ic_round_video_episode.xml" value="0.185" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/drawable/ic_status_state_circle.xml" value="0.185" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/drawable/ic_vertical_divider.xml" value="0.165" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/layout-land/fragment_character.xml" value="0.2535087719298246" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/layout-land/fragment_character_details.xml" value="0.2767543859649123" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/layout-land/fragment_episode.xml" value="0.26973684210526316" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/layout-land/fragment_location.xml" value="0.26973684210526316" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/layout/activity_main.xml" value="0.2469298245614035" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/layout/fragment_character.xml" value="0.25" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/layout/fragment_character_details.xml" value="0.2351851851851852" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/layout/fragment_episode.xml" value="0.23148148148148148" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/layout/fragment_location.xml" value="0.23508771929824562" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/layout/item_character.xml" value="0.2469298245614035" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/layout/item_episode.xml" value="0.33" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/layout/item_episode_bound.xml" value="0.24372294372294373" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/layout/item_location.xml" value="0.25" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/layout/item_network_state.xml" value="0.2469298245614035" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/layout/layout_nework_state.xml" value="0.24605263157894736" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/menu/bottom_nav_menu.xml" value="0.29322916666666665" />
+        <entry key="..\:/WorkOnly/AndroidStudioProjects/Rickscrate/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.297" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

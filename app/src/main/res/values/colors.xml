@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray_blue_light">#FF56989F</color>
+    <color name="gray_blue">#FF407277</color>
+    <color name="gray_blue_dark">#FF0f464b</color>
+    <color name="dirt_brown_light">#FF73675c</color>
+    <color name="dirt_brown">#FF473D33</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red_800">#FFC62828</color>
+    <color name="green_800">#FF2E7D32</color>
+    <color name="gray_800">#FF6E6E6E</color>
+</resources>
