@@ -86,7 +86,7 @@
 
                     <LinearLayout
                         android:id="@+id/status_field"
-                        android:layout_width="wrap_content"
+                        android:layout_width="@dimen/width_height_no_size"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         app:layout_constraintEnd_toStartOf="@id/gender_field"
@@ -104,8 +104,8 @@
                         <com.google.android.material.textview.MaterialTextView
                             android:id="@+id/details_status_tv"
                             style="@style/Rick.TextView.body"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:text="@{character.status}"
                             tools:text="@string/label_status_alive" />
 
@@ -113,7 +113,7 @@
 
                     <LinearLayout
                         android:id="@+id/gender_field"
-                        android:layout_width="wrap_content"
+                        android:layout_width="@dimen/width_height_no_size"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="@id/status_field"
@@ -133,7 +133,7 @@
                             android:id="@+id/details_gender_tv"
                             style="@style/Rick.TextView.body"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:gravity="center"
                             android:text="@{character.gender}"
                             tools:text="@string/label_gender_male" />

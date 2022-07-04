@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <integer name="single_max_line">1</integer>
     <integer name="vertical_item_span_count">2</integer>
     <integer name="horizontal_item_span_count">5</integer>
     <integer name="episode_bound_item_span_count">4</integer>

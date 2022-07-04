@@ -23,7 +23,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Rick.TextView.body" parent="TextAppearance.Material3.BodyMedium">
+    <style name="Rick.TextView.body" parent="TextAppearance.Material3.BodyLarge">
         <item name="fontFamily">@font/roboto</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textAlignment">center</item>
@@ -57,19 +57,21 @@
     </style>
 
     <style name="Rick.TextView.body_main" parent="Rick.TextView.body">
-        <item name="autoSizeMinTextSize">@dimen/textSize_body_small</item>
+        <item name="autoSizeMinTextSize">@dimen/textSize_body_mini</item>
         <item name="autoSizeMaxTextSize">@dimen/textSize_body</item>
         <item name="autoSizeTextType">uniform</item>
-        <item name="lineHeight">@dimen/spacing_normal</item>
+        <item name="lineHeight">@dimen/spacing_large</item>
         <item name="android:lines">@integer/vertical_item_span_count</item>
         <item name="android:maxLines">@integer/vertical_item_span_count</item>
     </style>
 
     <style name="Rick.TextView.body_main_small" parent="Rick.TextView.body_small">
-        <item name="autoSizeMinTextSize">@dimen/textSize_body_mini</item>
+        <item name="autoSizeMinTextSize">@dimen/textSize_body_tiny</item>
         <item name="autoSizeMaxTextSize">@dimen/textSize_body_small</item>
         <item name="autoSizeTextType">uniform</item>
         <item name="android:textSize">@dimen/textSize_body_small</item>
+        <item name="android:lines">@integer/single_max_line</item>
+        <item name="android:maxLines">@integer/single_max_line</item>
     </style>
 
     <style name="Rick.TextView.body_mini" parent="Rick.TextView.body_small">
@@ -84,10 +86,10 @@
     </style>
 
     <style name="Rick.TextView.body_details_large" parent="Rick.TextView.body_large">
-        <item name="autoSizeMinTextSize">@dimen/textSize_title</item>
+        <item name="autoSizeMinTextSize">@dimen/textSize_body2</item>
         <item name="autoSizeMaxTextSize">@dimen/textSize_title_large</item>
         <item name="autoSizeTextType">uniform</item>
-        <item name="lineHeight">@dimen/spacing_normal</item>
+        <item name="lineHeight">@dimen/spacing_extra_large</item>
         <item name="android:lines">@integer/vertical_item_span_count</item>
         <item name="android:maxLines">@integer/vertical_item_span_count</item>
     </style>
